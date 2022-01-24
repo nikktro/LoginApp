@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginScreenViewController: UIViewController {
+class LoginViewController: UIViewController {
 
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
@@ -16,7 +16,18 @@ class LoginScreenViewController: UIViewController {
         super.viewDidLoad()
         
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let helloVC = segue.destination as? WelcomeViewController else { return }
+        helloVC.userName = userNameTF.text
+    }
+    
+    @IBAction func loginButtonPressed() {
+        if loginSuccess() {
+            performSegue(withIdentifier: "loginSuccess", sender: nil)
+        }
+    }
+    
     @IBAction func forgotNameButtonPressed() {
         showNotification(title: "OOPS!!", message: "You username is 'User'")
     }
@@ -27,13 +38,21 @@ class LoginScreenViewController: UIViewController {
     
 }
 
-extension LoginScreenViewController {
+extension LoginViewController {
     
     private func showNotification(title: String, message: String) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertController = UIAlertController(title: title,
+                                                message: message,
+                                                preferredStyle: .alert)
+        
         let action = UIAlertAction(title: "OK", style: .default)
         alertController.addAction(action)
         present(alertController, animated: true)
+    }
+    
+    private func loginSuccess() -> Bool {
+        // TODO: add login check logic
+        return true
     }
     
 }
