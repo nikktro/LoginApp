@@ -13,6 +13,7 @@
 		B1C38154279EEAEB00068CC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1C38152279EEAEB00068CC7 /* Main.storyboard */; };
 		B1C38156279EEAF200068CC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1C38155279EEAF200068CC7 /* Assets.xcassets */; };
 		B1C38159279EEAF200068CC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1C38157279EEAF200068CC7 /* LaunchScreen.storyboard */; };
+		B1C38161279F4B8200068CC7 /* HelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C38160279F4B8200068CC7 /* HelloViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B1C38155279EEAF200068CC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1C38158279EEAF200068CC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1C3815A279EEAF200068CC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1C38160279F4B8200068CC7 /* HelloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				B1C3814C279EEAEB00068CC7 /* AppDelegate.swift */,
 				B1C3814E279EEAEB00068CC7 /* SceneDelegate.swift */,
 				B1C38150279EEAEB00068CC7 /* LoginScreenViewController.swift */,
+				B1C38160279F4B8200068CC7 /* HelloViewController.swift */,
 				B1C38152279EEAEB00068CC7 /* Main.storyboard */,
 				B1C38155279EEAF200068CC7 /* Assets.xcassets */,
 				B1C38157279EEAF200068CC7 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				B1C38151279EEAEB00068CC7 /* LoginScreenViewController.swift in Sources */,
 				B1C3814D279EEAEB00068CC7 /* AppDelegate.swift in Sources */,
 				B1C3814F279EEAEB00068CC7 /* SceneDelegate.swift in Sources */,
+				B1C38161279F4B8200068CC7 /* HelloViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
