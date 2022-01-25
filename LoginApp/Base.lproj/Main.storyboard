@@ -112,7 +112,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="DqE-oR-Naq" kind="unwind" unwindAction="unwindToLogin:" id="D12-8O-Bcz"/>
+                                    <segue destination="DqE-oR-Naq" kind="unwind" unwindAction="unwindToLoginVC:" id="Li4-sP-nNh"/>
                                 </connections>
                             </button>
                         </subviews>

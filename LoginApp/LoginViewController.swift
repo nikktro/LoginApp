@@ -36,6 +36,11 @@ class LoginViewController: UIViewController {
         showNotification(title: "OOPS!!", message: "You password is 'Password'")
     }
     
+    @IBAction func unwindToLoginVC(_ unwindSegue: UIStoryboardSegue) {
+        userNameTF.text = ""
+        passwordTF.text = ""
+    }
+    
 }
 
 extension LoginViewController {
