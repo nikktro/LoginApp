@@ -9,17 +9,18 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet var userNameTF: UITextField!
+    @IBOutlet var usernameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        usernameTF.delegate = self
+        passwordTF.delegate = self
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let helloVC = segue.destination as? WelcomeViewController else { return }
-        helloVC.userName = userNameTF.text
+        helloVC.userName = usernameTF.text
     }
     
     @IBAction func loginButtonPressed() {
@@ -37,16 +38,27 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func unwindToLoginVC(_ unwindSegue: UIStoryboardSegue) {
-        userNameTF.text = ""
+        usernameTF.text = ""
         passwordTF.text = ""
     }
     
 }
 
-extension LoginViewController {
+extension LoginViewController: UITextFieldDelegate {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == usernameTF {
+            textField.resignFirstResponder()
+            passwordTF.becomeFirstResponder()
+        } else if textField == passwordTF {
+            textField.resignFirstResponder()
+            loginButtonPressed()
+        }
+        return true
     }
     
     private func showNotification(title: String, message: String, handler: ((UIAlertAction) -> Void)? = nil) {
@@ -61,7 +73,7 @@ extension LoginViewController {
     }
     
     private func loginSuccess() -> Bool {
-        if userNameTF.text == "User" && passwordTF.text == "Password" {
+        if usernameTF.text == "User" && passwordTF.text == "Password" {
             return true
         }
         
