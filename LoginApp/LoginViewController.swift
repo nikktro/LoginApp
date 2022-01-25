@@ -45,6 +45,10 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController {
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
     private func showNotification(title: String, message: String, handler: ((UIAlertAction) -> Void)? = nil) {
         
         let alertController = UIAlertController(title: title,
