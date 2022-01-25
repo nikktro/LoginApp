@@ -19,8 +19,8 @@ class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let helloVC = segue.destination as? WelcomeViewController else { return }
-        helloVC.userName = usernameTF.text
+        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        welcomeVC.userName = usernameTF.text
     }
     
     @IBAction func loginButtonPressed() {

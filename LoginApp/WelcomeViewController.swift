@@ -24,7 +24,7 @@ class WelcomeViewController: UIViewController {
         
     }
     
-    func setGradientBackground() {
+    private func setGradientBackground() {
         let colorTop =  UIColor(red: 255.0/255.0, green: 155.0/255.0, blue: 155.0/255.0, alpha: 1.0).cgColor
         let colorBottom = UIColor(red: 10.0/255.0, green: 125.0/255.0, blue: 175.0/255.0, alpha: 1.0).cgColor
                     
