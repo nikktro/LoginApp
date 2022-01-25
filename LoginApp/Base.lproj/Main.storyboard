@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="oIL-7x-q4X">
-                                <rect key="frame" x="40" y="113" width="240" height="182.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="oIL-7x-q4X">
+                                <rect key="frame" x="40" y="153" width="240" height="182.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="A3a-fX-dGX">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="84"/>
@@ -35,7 +35,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2S-bf-2GK">
-                                        <rect key="frame" x="0.0" y="104" width="240" height="31"/>
+                                        <rect key="frame" x="88.5" y="104" width="63.5" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Log In"/>
                                         <connections>
@@ -43,7 +43,7 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="-20" translatesAutoresizingMaskIntoConstraints="NO" id="jS1-Ex-zdB">
-                                        <rect key="frame" x="0.0" y="155" width="240" height="27.5"/>
+                                        <rect key="frame" x="4.5" y="155" width="231" height="27.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrO-iX-zXx">
                                                 <rect key="frame" x="0.0" y="0.0" width="125.5" height="27.5"/>
@@ -56,7 +56,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMg-Kv-gub">
-                                                <rect key="frame" x="122.5" y="0.0" width="117.5" height="27.5"/>
+                                                <rect key="frame" x="113.5" y="0.0" width="117.5" height="27.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Forgot Password?">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="11"/>
@@ -68,13 +68,16 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="A3a-fX-dGX" firstAttribute="width" secondItem="oIL-7x-q4X" secondAttribute="width" id="wV6-Or-G8x"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="oIL-7x-q4X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="3Zp-Q6-A40"/>
-                            <constraint firstItem="oIL-7x-q4X" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-80" id="8xw-Ue-k5L"/>
+                            <constraint firstItem="oIL-7x-q4X" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-40" id="8xw-Ue-k5L"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oIL-7x-q4X" secondAttribute="trailing" constant="40" id="REc-7G-d8g"/>
                         </constraints>
                     </view>
@@ -118,7 +121,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Uvd-Bk-OLr"/>
-                        <color key="backgroundColor" red="0.96862745098039216" green="0.75670886621952216" blue="0.62269859958581897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemGray3Color"/>
                         <constraints>
                             <constraint firstItem="r5Z-e8-AhO" firstAttribute="centerY" secondItem="YSL-QO-36C" secondAttribute="centerY" constant="100" id="RXM-gO-0Zn"/>
                             <constraint firstItem="Mpn-8I-6vx" firstAttribute="top" secondItem="Uvd-Bk-OLr" secondAttribute="top" constant="80" id="bp3-eh-u14"/>
@@ -139,6 +142,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
