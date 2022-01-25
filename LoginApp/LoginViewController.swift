@@ -29,11 +29,11 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotNameButtonPressed() {
-        showNotification(title: "OOPS!!", message: "You username is 'User'")
+        showNotification(title: "Oops!!", message: "You username is 'User'")
     }
     
     @IBAction func forgotPasswordButtonPressed() {
-        showNotification(title: "OOPS!!", message: "You password is 'Password'")
+        showNotification(title: "Oops!!", message: "You password is 'Password'")
     }
     
     @IBAction func unwindToLoginVC(_ unwindSegue: UIStoryboardSegue) {
