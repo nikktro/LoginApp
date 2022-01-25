@@ -45,19 +45,29 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController {
     
-    private func showNotification(title: String, message: String) {
+    private func showNotification(title: String, message: String, handler: ((UIAlertAction) -> Void)? = nil) {
+        
         let alertController = UIAlertController(title: title,
                                                 message: message,
                                                 preferredStyle: .alert)
         
-        let action = UIAlertAction(title: "OK", style: .default)
+        let action = UIAlertAction(title: "OK", style: .default, handler: handler)
         alertController.addAction(action)
         present(alertController, animated: true)
     }
     
     private func loginSuccess() -> Bool {
-        // TODO: add login check logic
-        return true
+        if userNameTF.text == "User" && passwordTF.text == "Password" {
+            return true
+        }
+        
+        showNotification(
+            title: "Invalid login or password",
+            message: "Please enter correct login and password") { _ in
+                self.passwordTF.text = ""
+            }
+        
+        return false
     }
     
 }
