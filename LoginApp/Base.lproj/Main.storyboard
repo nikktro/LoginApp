@@ -40,7 +40,7 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Log In"/>
                                         <connections>
                                             <action selector="loginButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="EEt-GA-ory"/>
-                                            <segue destination="Pyo-FQ-wab" kind="presentation" modalPresentationStyle="fullScreen" id="BDs-SE-m29"/>
+                                            <segue destination="Pyo-FQ-wab" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" id="BDs-SE-m29"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="-16" translatesAutoresizingMaskIntoConstraints="NO" id="jS1-Ex-zdB">

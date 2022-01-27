@@ -80,6 +80,7 @@ extension LoginViewController: UITextFieldDelegate {
             passwordTF.becomeFirstResponder()
         } else if textField == passwordTF {
             loginButtonPressed()
+            performSegue(withIdentifier: "showWelcomeVC", sender: nil)
         }
         return true
     }
