@@ -15,6 +15,9 @@
 		B1C38159279EEAF200068CC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1C38157279EEAF200068CC7 /* LaunchScreen.storyboard */; };
 		B1C38161279F4B8200068CC7 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C38160279F4B8200068CC7 /* WelcomeViewController.swift */; };
 		B1F55BC627AA96B4008DC734 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F55BC527AA96B4008DC734 /* User.swift */; };
+		B1F55BC827AB3381008DC734 /* AboutUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F55BC727AB3381008DC734 /* AboutUserViewController.swift */; };
+		B1F55BCA27AB3587008DC734 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F55BC927AB3587008DC734 /* PhotoViewController.swift */; };
+		B1F55BCD27AB5F74008DC734 /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F55BCC27AB5F74008DC734 /* GradientBackground.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		B1C3815A279EEAF200068CC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1C38160279F4B8200068CC7 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		B1F55BC527AA96B4008DC734 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B1F55BC727AB3381008DC734 /* AboutUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUserViewController.swift; sourceTree = "<group>"; };
+		B1F55BC927AB3587008DC734 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		B1F55BCC27AB5F74008DC734 /* GradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,7 @@
 				B1F55BC427AA9174008DC734 /* Models */,
 				B1F55BC027AA8DBC008DC734 /* ViewControllers */,
 				B1F55BC227AA8DDF008DC734 /* Storyboards */,
+				B1F55BCB27AB5F50008DC734 /* Helpers */,
 				B1F55BC127AA8DCC008DC734 /* App */,
 				B1F55BC327AA8E28008DC734 /* Resources */,
 			);
@@ -74,6 +81,8 @@
 			children = (
 				B1C38150279EEAEB00068CC7 /* LoginViewController.swift */,
 				B1C38160279F4B8200068CC7 /* WelcomeViewController.swift */,
+				B1F55BC727AB3381008DC734 /* AboutUserViewController.swift */,
+				B1F55BC927AB3587008DC734 /* PhotoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -111,6 +120,14 @@
 				B1F55BC527AA96B4008DC734 /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B1F55BCB27AB5F50008DC734 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B1F55BCC27AB5F74008DC734 /* GradientBackground.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,9 +202,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1C38151279EEAEB00068CC7 /* LoginViewController.swift in Sources */,
+				B1F55BCD27AB5F74008DC734 /* GradientBackground.swift in Sources */,
 				B1C3814D279EEAEB00068CC7 /* AppDelegate.swift in Sources */,
 				B1C3814F279EEAEB00068CC7 /* SceneDelegate.swift in Sources */,
 				B1F55BC627AA96B4008DC734 /* User.swift in Sources */,
+				B1F55BCA27AB3587008DC734 /* PhotoViewController.swift in Sources */,
+				B1F55BC827AB3381008DC734 /* AboutUserViewController.swift in Sources */,
 				B1C38161279F4B8200068CC7 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
