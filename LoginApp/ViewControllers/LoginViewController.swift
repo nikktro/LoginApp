@@ -12,7 +12,7 @@ class LoginViewController: UIViewController {
     @IBOutlet var usernameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    private var userModel: User!
+    private var userModel = User.getUser()
     private var user = ""
     private var password = ""
     
@@ -21,7 +21,6 @@ class LoginViewController: UIViewController {
         usernameTF.delegate = self
         passwordTF.delegate = self
         
-        userModel = User.getUser()
         user = userModel.user
         password = userModel.password
     }
