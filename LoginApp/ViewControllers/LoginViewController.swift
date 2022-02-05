@@ -9,38 +9,35 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    // MARK: - IB Outlets
     @IBOutlet var usernameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    private var userModel = User.getUser()
-    private var user = ""
-    private var password = ""
-    
+    // MARK: - Private Properties
+    private var user = User.getUserData()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         usernameTF.delegate = self
         passwordTF.delegate = self
-        
-        user = userModel.user
-        password = userModel.password
     }
     
+    // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let tabBarController = segue.destination as! UITabBarController
-        
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
         guard let viewControllers = tabBarController.viewControllers else { return }
         
         for viewController in viewControllers {
             if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.person = userModel.person
+                welcomeVC.user = user
             } else if let navigationVC = viewController as? UINavigationController {
-                let aboutUserVC = navigationVC.topViewController as! AboutUserViewController
-                aboutUserVC.person = userModel.person
+                guard let aboutUserVC = navigationVC.topViewController as? AboutUserViewController else { return }
+                aboutUserVC.user = user
             }
         }
-        
     }
     
+    // MARK: IBActions
     @IBAction func loginButtonPressed() {
         if !loginSuccess() {
             showNotification(
@@ -52,11 +49,11 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotNameButtonPressed() {
-        showNotification(title: "Oops!!", message: "You username is '\(user)'")
+        showNotification(title: "Oops!!", message: "You username is '\(user.login)'")
     }
     
     @IBAction func forgotPasswordButtonPressed() {
-        showNotification(title: "Oops!!", message: "You password is '\(password)'")
+        showNotification(title: "Oops!!", message: "You password is '\(user.password)'")
     }
     
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
@@ -69,7 +66,7 @@ class LoginViewController: UIViewController {
 // MARK: - Private Methods
 extension LoginViewController {
     private func loginSuccess() -> Bool {
-        usernameTF.text == user && passwordTF.text == password
+        usernameTF.text == user.login && passwordTF.text == user.password
     }
 }
 

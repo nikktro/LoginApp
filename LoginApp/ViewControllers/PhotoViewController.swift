@@ -11,12 +11,12 @@ class PhotoViewController: UIViewController {
 
     @IBOutlet var photoAboutMe: UIImageView!
     
-    var person: Person!
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setGradientBackground(view)
-        photoAboutMe.image = UIImage(named: person.photo)
+        photoAboutMe.image = UIImage(named: user.person.photo)
     }
     
 }

@@ -11,11 +11,11 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet var helloLabel: UILabel!
     
-    var person: Person!
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setGradientBackground(view)
-        helloLabel.text = "Hello, \(person.name) \(person.surname)!"
+        helloLabel.text = "Hello, \(user.person.fullname)!"
     }
 }

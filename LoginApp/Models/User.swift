@@ -8,12 +8,12 @@
 import Foundation
 
 struct User {
-    let user: String
+    let login: String
     let password: String
     let person: Person
     
-    static func getUser() -> User {
-        User(user: "User",
+    static func getUserData() -> User {
+        User(login: "User",
              password: "Password",
              person: Person(name: "Nikolay",
                             surname: "Trofimov",
@@ -31,4 +31,8 @@ struct Person {
     let surname: String
     let about: String
     let photo: String
+    
+    var fullname: String {
+        name + " " + surname
+    }
 }
